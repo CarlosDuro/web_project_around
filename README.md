@@ -52,4 +52,4 @@ _Aquí podrías incluir una imagen o gif corto mostrando la funcionalidad princi
 ```
 
 🌐 **Ver el proyecto en línea:**  
-👉 [https://carlosduro.github.io/web_project_aroud/](https://carlosduro.github.io/web_project_aroud/)
+👉 [https://carlosduro.github.io/web_project_aroud/](https://carlosduro.github.io/web_project_around/)
