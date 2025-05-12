@@ -1,4 +1,4 @@
-# 🚀 Proyecto Sprint 5 - Web Interactiva
+# 🚀 Proyecto Sprint 7 - Web Interactiva
 
 Una evolución del sprint anterior donde añadimos **funcionalidades dinámicas** para enriquecer la experiencia del usuario. Se trata de una página web enfocada en perfiles con la posibilidad de **agregar, quitar y reaccionar** a cada uno de ellos. 💬👥
 
@@ -36,7 +36,8 @@ Además, se continúa sobre el proyecto base del sprint anterior, extendiéndolo
 
 ## 📸 Vista Previa (opcional)
 
-_Aquí podrías incluir una imagen o gif corto mostrando la funcionalidad principal de la app._
+_![Demo de la app](images/moved_project-4-01-eng.gif)
+_
 
 ---
 
@@ -52,4 +53,4 @@ _Aquí podrías incluir una imagen o gif corto mostrando la funcionalidad princi
 ```
 
 🌐 **Ver el proyecto en línea:**  
-👉 [https://carlosduro.github.io/web_project_aroud/](https://carlosduro.github.io/web_project_around/)
+👉 [https://carlosduro.github.io/web_project_around/](https://carlosduro.github.io/web_project_around/)
