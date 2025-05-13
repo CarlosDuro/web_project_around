@@ -29,7 +29,6 @@
 }
 
 .card__information-name {
-  font-family: Inter;
   font-size: 24px;
   font-weight: 900;
   color: #000000;
@@ -84,7 +83,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 2rem;
     margin-bottom: 48px;
   }
 }
@@ -93,6 +92,6 @@
   .cards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    margin-left: 110px;
+    place-items: center;
   }
 }
