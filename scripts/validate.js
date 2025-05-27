@@ -1,7 +1,3 @@
-/**
- * Configuración de validación para formularios
- * @type {Object}
- */
 const validationConfig = {
   formSelector: ".popup__form",
   inputSelector: ".popup__input",
@@ -11,11 +7,6 @@ const validationConfig = {
   errorClass: "popup__error_visible",
 };
 
-/**
- * Muestra el mensaje de error de validación
- * @param {HTMLFormElement} formElement - Formulario contenedor
- * @param {HTMLInputElement} inputElement - Input que falló validación
- */
 const showValidationError = (formElement, inputElement) => {
   const errorElement = formElement.querySelector(`#${inputElement.id}-error`);
   inputElement.classList.add(validationConfig.inputErrorClass);
@@ -23,11 +14,6 @@ const showValidationError = (formElement, inputElement) => {
   errorElement.classList.add(validationConfig.errorClass);
 };
 
-/**
- * Oculta el mensaje de error de validación
- * @param {HTMLFormElement} formElement - Formulario contenedor
- * @param {HTMLInputElement} inputElement - Input validado
- */
 const hideValidationError = (formElement, inputElement) => {
   const errorElement = formElement.querySelector(`#${inputElement.id}-error`);
   inputElement.classList.remove(validationConfig.inputErrorClass);
@@ -35,11 +21,6 @@ const hideValidationError = (formElement, inputElement) => {
   errorElement.classList.remove(validationConfig.errorClass);
 };
 
-/**
- * Valida un campo de entrada y muestra/oculta errores
- * @param {HTMLFormElement} formElement - Formulario contenedor
- * @param {HTMLInputElement} inputElement - Input a validar
- */
 const validateInput = (formElement, inputElement) => {
   if (inputElement.validity.valid) {
     hideValidationError(formElement, inputElement);
@@ -48,20 +29,10 @@ const validateInput = (formElement, inputElement) => {
   }
 };
 
-/**
- * Verifica si todos los campos del formulario son válidos
- * @param {HTMLInputElement[]} inputList - Lista de inputs
- * @returns {boolean} - True si hay al menos un campo inválido
- */
 const hasInvalidInput = (inputList) => {
   return inputList.some((inputElement) => !inputElement.validity.valid);
 };
 
-/**
- * Actualiza el estado del botón de submit
- * @param {HTMLInputElement[]} inputList - Lista de inputs
- * @param {HTMLButtonElement} buttonElement - Botón de submit
- */
 const toggleButtonState = (inputList, buttonElement) => {
   if (hasInvalidInput(inputList)) {
     buttonElement.disabled = true;
@@ -72,10 +43,6 @@ const toggleButtonState = (inputList, buttonElement) => {
   }
 };
 
-/**
- * Configura los event listeners para validación en un formulario
- * @param {HTMLFormElement} formElement - Formulario a configurar
- */
 const setEventListeners = (formElement) => {
   const inputList = Array.from(
     formElement.querySelectorAll(validationConfig.inputSelector)
@@ -84,7 +51,6 @@ const setEventListeners = (formElement) => {
     validationConfig.submitButtonSelector
   );
 
-  // Validación inicial
   toggleButtonState(inputList, buttonElement);
 
   inputList.forEach((inputElement) => {
@@ -93,16 +59,12 @@ const setEventListeners = (formElement) => {
       toggleButtonState(inputList, buttonElement);
     });
 
-    // Validación adicional al perder foco
     inputElement.addEventListener("blur", () => {
       validateInput(formElement, inputElement);
     });
   });
 };
 
-/**
- * Habilita la validación para todos los formularios
- */
 const enableValidation = () => {
   const formList = Array.from(
     document.querySelectorAll(validationConfig.formSelector)
@@ -117,5 +79,4 @@ const enableValidation = () => {
   });
 };
 
-// Iniciar la validación
 enableValidation();
