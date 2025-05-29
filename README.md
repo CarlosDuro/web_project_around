@@ -1,4 +1,4 @@
-# 🚀 Proyecto Sprint 7 - Web Interactiva
+# 🚀 Proyecto Sprint 7 & 8 && 9 - Web Interactiva
 
 Una evolución del sprint anterior donde añadimos **funcionalidades dinámicas** para enriquecer la experiencia del usuario. Se trata de una página web enfocada en perfiles con la posibilidad de **agregar, quitar y reaccionar** a cada uno de ellos. 💬👥
 
