@@ -38,15 +38,15 @@
         <div class="cards"></div>
       </main>
 
-      <!----------- EDITAR PERFIL --------------->
+      <!-- Edit Profile Popup -->
       <section class="popup" id="edit-profile-popup">
-        <div class="popup__overlay" id="popup-edit-overlay">
-          <div class="popup__container" id="edit-container">
-            <button class="popup__close-button" id="close-button"></button>
+        <div class="popup__overlay">
+          <div class="popup__container">
+            <button class="popup__close-button"></button>
             <form class="popup__form" id="profile-form">
               <h2 class="popup__title">Edit profile</h2>
               <input
-                class="popup__input popup__input_name"
+                class="popup__input"
                 type="text"
                 id="input-name"
                 value="Jacques Cousteau"
@@ -57,7 +57,7 @@
               />
               <span class="popup__error" id="input-name-error"></span>
               <input
-                class="popup__input popup__input_about"
+                class="popup__input"
                 type="text"
                 id="input-about"
                 value="Explorer"
@@ -72,67 +72,66 @@
           </div>
         </div>
       </section>
-      <!-----------AGREGAR IMAGENES--------------->
+
+      <!-- Add Image Popup -->
       <section class="popup" id="add-image-popup">
-        <div class="popup__overlay" id="popup-add-overlay">
-          <div class="popup__container" id="add-container">
-            <button
-              class="popup__close-button"
-              id="close-button-image"
-            ></button>
+        <div class="popup__overlay">
+          <div class="popup__container">
+            <button class="popup__close-button"></button>
             <form class="popup__form" id="add-image-form">
               <h2 class="popup__title">New place</h2>
               <input
-                class="popup__input popup__input_name"
+                class="popup__input"
                 type="text"
                 id="input-title-place"
                 name="title"
                 minlength="2"
                 maxlength="50"
-                placeholder="title"
+                placeholder="Title"
                 required
               />
               <span class="popup__error" id="input-title-place-error"></span>
               <input
-                class="popup__input popup__input_about"
+                class="popup__input"
                 type="url"
                 id="input-url-image"
                 name="link"
-                minlength="2"
-                placeholder="URL"
+                placeholder="Image URL"
                 required
               />
-
               <span class="popup__error" id="input-url-image-error"></span>
-
               <button class="popup__save-button" type="submit">Create</button>
             </form>
           </div>
         </div>
       </section>
+
+      <!-- Card Template -->
       <template class="template-card">
         <div class="card">
           <button class="card__delete-button"></button>
-          <img class="card__image" />
+          <img class="card__image" alt="" />
           <div class="card__information">
             <p class="card__information-name"></p>
             <button class="card__like-button"></button>
           </div>
         </div>
       </template>
+
+      <!-- Image Popup -->
       <div class="popup" id="popup-image-open">
-        <div class="popup__overlay" id="popup-image-overlay">
+        <div class="popup__overlay">
           <div class="popup__conteiner-image">
-            <button class="popup__close-button popup__close-imag"></button>
+            <button class="popup__close-button"></button>
             <img class="popup__image" src="." alt="" />
             <h2 class="popup__image-title"></h2>
           </div>
         </div>
       </div>
+
       <footer class="footer">&copy; 2025. Carlos Durán</footer>
     </div>
 
-    <script src="./scripts/index.js"></script>
-    <script src="./scripts/validate.js"></script>
+    <script type="module" src="./scripts/index.js"></script>
   </body>
 </html>
