@@ -1,4 +1,4 @@
-# 🚀 Proyecto Sprint 7, 8, 9 y 10 - Web Interactiva con POO
+# 🚀 Proyecto Sprint 7, 8, 9, 10 y 11 - Web Interactiva con POO
 
 Una evolución progresiva del proyecto anterior, donde no solo se integran funcionalidades dinámicas sino también un enfoque profesional de arquitectura con **Programación Orientada a Objetos avanzada (POO)** y la incorporación de herramientas modernas como **NPM** para una mejor gestión del código y dependencias. Se trata de una página web interactiva enfocada en perfiles de usuario, con opciones para agregarlos, editarlos, eliminarlos y reaccionar a ellos. 💬👥
 
