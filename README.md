@@ -1,50 +1,54 @@
 # 🚀 Proyecto Sprint 7, 8, 9 y 10 - Web Interactiva con POO
 
-UUna evolución del sprint anterior donde añadimos funcionalidades dinámicas para enriquecer la experiencia del usuario. Se trata de una página web enfocada en perfiles con la posibilidad de agregar, quitar y reaccionar a cada uno de ellos. 💬👥
-
-Además, se incorporan principios de Programación Orientada a Objetos (POO) para mejorar la estructura, escalabilidad y mantenibilidad del código.
+Una evolución progresiva del proyecto anterior, donde no solo se integran funcionalidades dinámicas sino también un enfoque profesional de arquitectura con **Programación Orientada a Objetos avanzada (POO)** y la incorporación de herramientas modernas como **NPM** para una mejor gestión del código y dependencias. Se trata de una página web interactiva enfocada en perfiles de usuario, con opciones para agregarlos, editarlos, eliminarlos y reaccionar a ellos. 💬👥
 
 ---
 
 ## 🧰 Tecnologías Utilizadas
 
-| Herramienta                      | Descripción breve                                     |
-| -------------------------------- | ----------------------------------------------------- |
-| 🎨 **Figma**                     | Diseño y prototipado de interfaz                      |
-| 🌐 **HTML**                      | Estructura básica del sitio                           |
-| 🎨 **CSS**                       | Estilos visuales y animaciones                        |
-| 🔄 **Metodología BEM**           | Organización escalable de clases CSS                  |
-| 🧱 **CSS Grid**                  | Sistema de maquetado                                  |
-| 📱 **Responsive Design**         | Adaptabilidad a diferentes dispositivos               |
-| 🧠 **JavaScript (POO)**          | Lógica orientada a objetos para el manejo de perfiles |
-| 🧾 **Validación de Formularios** | Control y validación de entradas                      |
-| 🛠️ **GIT**                       | Control de versiones y trabajo colaborativo           |
+| Herramienta                      | Descripción breve                                  |
+| -------------------------------- | -------------------------------------------------- |
+| 🎨 **Figma**                     | Diseño y prototipado de interfaz                   |
+| 🌐 **HTML**                      | Estructura básica del sitio                        |
+| 🎨 **CSS**                       | Estilos visuales y animaciones                     |
+| 🔄 **Metodología BEM**           | Organización escalable de clases CSS               |
+| 🧱 **CSS Grid**                  | Sistema de maquetado flexible                      |
+| 📱 **Responsive Design**         | Adaptabilidad a diferentes dispositivos            |
+| 🧠 **JavaScript (POO avanzada)** | Estructura del proyecto basada en clases modulares |
+| 📦 **NPM**                       | Gestión de dependencias y scripts de construcción  |
+| 🧾 **Validación de Formularios** | Control y validación de entradas del usuario       |
+| 🛠️ **GIT**                       | Control de versiones y trabajo colaborativo        |
 
 ---
 
 ## ✨ Descripción del Proyecto
 
-> Esta página web busca representar perfiles de usuarios con una interfaz moderna y funcionalidades prácticas. Los usuarios pueden:
+> Esta aplicación web representa una interfaz moderna para manejar perfiles de usuarios, donde el usuario puede:
 
 - ➕ **Añadir nuevos perfiles**
 - ❌ **Eliminar tarjetas existentes**
+- ✏️ **Editar información del perfil**
 - ❤️ **Marcar perfiles como favoritos**
+- 🔍 **Ver imágenes en pantalla completa**
+- ❌ **Cerrar popups con Escape o clic en la superposición**
 
-Todo esto se logra gracias a **JavaScript**, que permite manejar dinámicamente los elementos del DOM, y refleja el avance de conocimientos adquiridos en este **Sprint 5**.
+Todo esto se implementa con una arquitectura orientada a objetos en JavaScript, dividiendo responsabilidades en clases específicas, facilitando el mantenimiento y escalabilidad del proyecto.
 
-Además, se continúa sobre el proyecto base del sprint anterior, extendiéndolo con nuevas características e interacciones que lo vuelven más rico y funcional.
+---
 
 ## 💡 Mejora clave: Programación Orientada a Objetos
 
-La lógica de manejo de perfiles se ha reestructurado usando clases en JavaScript, aplicando:
+El proyecto fue refactorizado profundamente usando principios avanzados de **POO en JavaScript** junto con **modularización mediante ES Modules y herramientas de entorno profesional como NPM**.
 
-Encapsulación: Cada perfil es una instancia de una clase Perfil, que mantiene sus propios datos y métodos privados, ocultando la complejidad interna.
+### Características implementadas:
 
-Herencia: Se definió una clase base ComponenteUI, que encapsula comportamientos comunes como renderizado, y es extendida por clases específicas como TarjetaPerfil.
-
-Polimorfismo: Distintas clases hijas redefinen el método render() para personalizar cómo se muestra cada tipo de perfil (e.g. estándar, favorito).
-
-Modularidad y Reutilización: Esto permite una arquitectura más clara, flexible y lista para escalar nuevas funcionalidades como perfiles verificados, perfiles destacados, etc.
+- 🔹 **Encapsulación**: Cada componente (Card, Form, Popup, UserInfo) maneja sus propios datos y métodos.
+- 🔹 **Herencia y composición**: Clases como `PopupWithImage`, `PopupWithForm` extienden de una clase base `Popup`, reutilizando y personalizando funcionalidad.
+- 🔹 **Responsabilidad única**: Cada clase tiene una única responsabilidad (principio SRP).
+- 🔹 **Uso de NPM**:
+  - Scripts de desarrollo: `npm run build`, `npm run start`
+  - Estructura moderna del proyecto (`package.json`, `modules`, `dist`)
+  - Posible integración de herramientas como Webpack y Babel
 
 ---
 
@@ -60,32 +64,36 @@ _
 ```plaintext
 📁 proyecto/
 ├── 📁 blocks/                   # Estilos CSS modulares organizados por componentes (BEM)
-│   ├── cards.css               # Estilos para las tarjetas de perfil
-│   ├── footer.css              # Estilos del pie de página
-│   ├── header.css              # Estilos del encabezado
-│   ├── page.css                # Estilos generales de la página
-│   ├── popup.css               # Estilos para ventanas emergentes (modales)
-│   ├── profile.css             # Estilos para la sección de perfil de usuario
+│   ├── cards.css
+│   ├── footer.css
+│   ├── header.css
+│   ├── page.css
+│   ├── popup.css
+│   ├── profile.css
 │
-├── 📁 images/                  # Imágenes e íconos usados en la interfaz
-│   └── moved_project-4-01-eng.gif
+├── 📁 images/                  # Recursos gráficos
 │
-├── 📁 pages/                   # Archivos relacionados con vistas HTML y sus estilos
-│   └── index.css              # Estilos globales asociados a la página principal
+├── 📁 pages/
+│   ├── index.html             # Página principal
+│   └── index.css              # Estilos globales
 │
-├── 📁 scripts/                 # Código JavaScript modularizado y orientado a objetos
-│   ├── index.js               # Punto de entrada principal del proyecto
-│   ├── Card.js                # Clase para generar y gestionar tarjetas de usuario (POO)
-│   ├── FormValidator.js       # Clase para validar formularios dinámicamente
-│   └── utils.js               # Funciones utilitarias generales (helpers)
+├── 📁 scripts/
+│   ├── index.js               # Punto de entrada del proyecto
+│   ├── utils.js               # Utilidades y configuración global
+│   └── 📁 components/         # Clases modulares (POO)
+│       ├── Card.js
+│       ├── FormValidator.js
+│       ├── Popup.js
+│       ├── PopupWithForm.js
+│       ├── PopupWithImage.js
+│       ├── Section.js
+│       └── UserInfo.js
 │
-├── 📁 vendor/                 # Librerías o recursos de terceros (si aplica)
-│
-├── 📄 index.html              # Estructura HTML principal del sitio
-├── 📄 favicon.ico             # Ícono del sitio web
-├── 📄 README.md               # Documentación del proyecto (tú estás aquí)
-└── 📄 .DS_Store               # Archivo oculto generado por macOS (puede ignorarse)
-
+├── 📁 vendor/                 # Recursos de terceros (si aplica)
+├── 📄 package.json            # Configuración NPM
+├── 📄 .gitignore              # Archivos y carpetas ignoradas por Git
+├── 📄 README.md               # Este documento
+└── 📄 favicon.ico             # Ícono del sitio
 ```
 
 🌐 **Ver el proyecto en línea:**  
