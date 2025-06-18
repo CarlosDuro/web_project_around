@@ -74,7 +74,6 @@ _
 ├── 📁 images/                  # Recursos gráficos
 │
 ├── 📁 pages/
-│   ├── index.html             # Página principal
 │   └── index.css              # Estilos globales
 │
 ├── 📁 scripts/
@@ -90,6 +89,9 @@ _
 │       └── UserInfo.js
 │
 ├── 📁 vendor/                 # Recursos de terceros (si aplica)
+│   └── 📁 fonts/              # Estilos y tipografías
+│   ├── normalize.css           # Reset de estilos
+├── 📄 index.html              # Página principal
 ├── 📄 package.json            # Configuración NPM
 ├── 📄 .gitignore              # Archivos y carpetas ignoradas por Git
 ├── 📄 README.md               # Este documento
