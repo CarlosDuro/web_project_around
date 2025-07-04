@@ -1,4 +1,6 @@
-.cards {
+/* ======== Contenedor de tarjetas ======== */
+
+.cards__list {
   display: grid;
   justify-content: center;
   grid-template-columns: repeat(3, 1fr);
@@ -7,25 +9,34 @@
   min-height: 300px;
 }
 
+/* ======== Tarjeta individual ======== */
+
 .card {
   width: 282px;
   background-color: #ffffff;
   border-radius: 10px;
   overflow: hidden;
   position: relative;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
+
+/* ======== Imagen ======== */
 
 .card__image {
   width: 100%;
   height: 280px;
+  object-fit: cover;
+  display: block;
 }
+
+/* ======== Información ======== */
 
 .card__information {
   display: flex;
-  background-color: white;
-  justify-content: space-around;
-  padding: 15px 0;
+  justify-content: space-between;
   align-items: center;
+  padding: 15px 20px;
+  background-color: white;
 }
 
 .card__information-name {
@@ -34,19 +45,30 @@
   color: #000000;
   text-overflow: ellipsis;
   white-space: nowrap;
-  max-width: 70%;
   overflow: hidden;
+  flex: 1;
   margin: 0;
+  margin-right: 10px;
+}
+
+/* ======== Like container ======== */
+
+.card__like-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .card__like-button {
   background-image: url(../images/Vector.svg);
   background-repeat: no-repeat;
+  background-size: contain;
   width: 21px;
   height: 18px;
-  border: 0;
+  border: none;
   cursor: pointer;
-  background-color: #ffffff;
+  background-color: transparent;
+  transition: opacity 0.2s ease;
 }
 
 .card__like-button:hover {
@@ -57,9 +79,18 @@
   background-image: url(../images/Union.svg);
 }
 
+.card__like-count {
+  font-size: 14px;
+  color: #000000;
+  margin-top: 4px;
+}
+
+/* ======== Botón borrar ======== */
+
 .card__delete-button {
   background-image: url(../images/Trash.png);
   background-repeat: no-repeat;
+  background-size: contain;
   width: 18px;
   height: 19px;
   border: none;
@@ -68,7 +99,7 @@
   z-index: 10;
   top: 18px;
   right: 15px;
-  transition: 0.3s ease-in-out;
+  transition: opacity 0.3s ease;
   background-color: transparent;
 }
 
@@ -76,8 +107,10 @@
   opacity: 0.6;
 }
 
+/* ======== Responsive ======== */
+
 @media screen and (max-width: 768px) {
-  .cards {
+  .cards__list {
     display: flex;
     row-gap: 20px;
     align-items: center;
@@ -86,12 +119,9 @@
     gap: 2rem;
     margin-bottom: 48px;
   }
-}
 
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  .cards {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    place-items: center;
+  .card {
+    width: 90%;
+    max-width: 282px;
   }
 }

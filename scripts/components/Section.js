@@ -1,19 +1,26 @@
 export default class Section {
-  constructor({ items, renderer }, containerSelector) {
+  constructor({ items = [], renderer }, containerSelector) {
     this._items = items;
     this._renderer = renderer;
     this._container = document.querySelector(containerSelector);
+    console.log("🚩 Section container:", this._container);
   }
 
-  // Renderiza todos los elementos utilizando el renderer provisto
-  renderItems() {
-    this._items.forEach((item) => {
+  renderItems(items = this._items) {
+    items.forEach((item) => {
       this._renderer(item);
     });
   }
 
-  // Agrega un elemento DOM al contenedor
-  addItem(element) {
-    this._container.prepend(element);
+  addItem(element, append = false) {
+    if (append) {
+      this._container.append(element);
+    } else {
+      this._container.prepend(element);
+    }
+  }
+
+  setItems(items) {
+    this._items = items;
   }
 }
